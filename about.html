@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shades of Art</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      height: 450px;
+      background-image: url("Shades of love.jpeg"); /* make sure this image is in the same folder */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+
+    section {
+      padding: 40px;
+      text-align: center;
+      background-color: white;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    section p {
+      color: #555;
+    }
+
+    section button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    section button:hover {
+      background-color: #444;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    #about {
+  padding: 50px;
+  background-color: #74acac;
+  max-width: 100%;
+  margin: 40px auto;
+  border-radius: 12px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.social-fixed {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 9999;
+}
+
+.social-fixed a {
+  color: white;
+  background-color: #25D366; /* WhatsApp green */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-fixed a.instagram {
+  background-color: #C13584; /* Instagram pink */
+}
+
+.social-fixed a:hover {
+  opacity: 0.85;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.03);
+}
+
+  </style>
+</head>
+<body>
+
+<header></header>
+
+<nav>
+  <a href="website.html">Home</a>
+  <a href="about.html"><u>About</u></a> <!-- New -->
+   <a href="order.html">Order</a>
+   <a href="help.html">Help</a>
+</nav>
+
+
+<section id="about">
+  <h2>Our Artworks & Style</h2>
+  <p>Browse through to get a sense of our visual style and the passion behind our work.</p>
+
+  <div class="image-grid">
+
+  <!-- <div class="reel-wrapper">
+    <div class="reel-track" id="autoReelTrack"> -->
+       <img src="painting 1.jpeg" alt="Art 1">
+      <img src="Pencil art 1.jpeg" alt="Art 2">
+      <img src="painting 5.jpeg" alt="Art 3">
+      <img src="painting 3.jpeg" alt="Art 4">
+       <img src="pencil art 5.jpeg" alt="Art 4">
+        <img src="pencil art 6 (1).jpeg" alt="Art 4">
+         <img src="pencil art 7.jpeg" alt="Art 4">
+          <img src="pencil art 8.jpeg" alt="Art 4">
+           <img src="pencil art 9.jpeg" alt="Art 4">
+            <img src="pencil art 10.jpeg" alt="Art 4">
+      <!-- Duplicate images ensure seamless looping -->
+    </div>
+  </div>
+<!-- </section> -->
+<div class="social-fixed">
+  <a href="https://wa.me/9196033425556" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://instagram.com/shades_of_artss" target="_blank" class="instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+<footer>
+  <p>© 2025 Shades of Art. All rights reserved.</p>
+</footer>
+
+<script>
+   function scrollReel(direction) {
+    const track = document.getElementById('reelTrack');
+    const scrollAmount = 320; // width of image + gap
+
+    track.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+
+</body>
+</html>

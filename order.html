@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shades of Art - Order</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color:#74acac;
+    }
+
+    header {
+      height: 450px;
+      background-image: url("Shades of love.jpeg"); /* make sure this image is in the same folder */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bfff;
+    }
+     section {
+      padding: 40px;
+      text-align: center;
+      background-color: white;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    section p {
+      color: #555;
+    }
+
+    section button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    section button:hover {
+      background-color: #444;
+    }
+.order-form {
+      background-color: #fafafa;
+      padding: 40px;
+      text-align: center;
+      margin: 40px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .order-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  text-align: left;
+  gap: 15px;
+}
+
+.form-group label {
+  flex: 1;
+  font-size: 16px;
+}
+
+.form-group select {
+  flex: 2;
+}
+    .order-form input,
+    .order-form select,
+    .order-form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .order-form button {
+      padding: 10px;
+      background-color: #000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+.social-fixed {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 9999;
+}
+
+.social-fixed a {
+  color: white;
+  background-color: #25D366; /* WhatsApp green */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-fixed a.instagram {
+  background-color: #C13584; /* Instagram pink */
+}
+
+.social-fixed a:hover {
+  opacity: 0.85;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  text-align: left;
+  gap: 15px;
+}
+
+.form-group label {
+  flex: 1;
+  font-size: 16px;
+}
+
+.form-group select,
+.form-group input {
+  flex: 2;
+}
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header></header>
+  <nav>
+    <a href="website.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="order.html">Order</a>
+    <a href="help.html">Help</a>
+  </nav>
+
+  <section class="order-form">
+    <h2>Place Your Order</h2>
+ <form action="https://formsubmit.co/bhargavikotagiri0@gmail.com" method="POST" enctype="multipart/form-data">
+  <input type="hidden" name="_subject" value="🎨 New Order - Shades of Art">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="thankyou.html">
+
+  
+  <input type="text" id="name" placeholder="Your Name" required />
+  <input type="email" id="email" placeholder="Your Email" required />
+  <input type="tel" id="phone" placeholder="Phone Number" required />
+
+  <select id="artStyle" required>
+    <option value="">Select Art Style</option>
+    <option value="pencil">Pencil</option>
+    <option value="painting">Painting</option>
+    <option value="charcoal">Charcoal</option>
+    <option value="popart">Pop Art</option>
+    <option value="mandala">Mandala</option>
+  </select>
+
+  <select id="size" required>
+    <option value="">Select Size</option>
+    <option value="A5">A5</option>
+    <option value="A4">A4</option>
+    <option value="A3">A3</option>
+    <option value="A2">A2</option>
+    <option value="A1">A1</option>
+  </select>
+
+  <select id="members" required>
+    <option value="">Number of Members</option>
+  </select>
+
+  <button type="button" onclick="handlePayment()">Show Payment</button>
+
+  <div id="payment-section" style="display: none;">
+    <h3>Scan to Pay</h3>
+    <img src="QR code.jpeg" alt="QR Code" width="200" height="200" />
+    <p><strong>UPI ID:</strong> 9603342556@ptsbi</p>
+    <p><strong>Amount: ₹<span id="display-amount">0</span></strong></p>
+    <label>Upload Screenshot:</label><br />
+    <input type="file" id="paymentScreenshot" accept="image/*" required />
+  </div>
+
+  <button type="submit" id="submitOrderBtn">Submit Order</button>
+</form>
+
+  </section>
+<div class="social-fixed">
+  <a href="https://wa.me/9196033425556" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://instagram.com/shades_of_artss" target="_blank" class="instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+</div>
+  <footer>
+    <p>© 2025 Shades of Art. All rights reserved.</p>
+  </footer>
+
+ <script>
+  // Step 1: Populate members based on size
+ document.getElementById("size").addEventListener("change", function () {
+  const size = this.value;
+  const members = document.getElementById("members");
+  members.innerHTML = "<option value=''>Number of Members</option>";
+
+  const sizeMap = {
+    A5: [1],
+    A4: [1, 2],
+    A3: [1, 2],
+    A2: [1, 2],
+    A1: [1, 2, 3, 4, 5]
+  };
+
+  (sizeMap[size] || []).forEach(num => {
+    const opt = document.createElement("option");
+    opt.value = num;
+    opt.textContent = num;
+    members.appendChild(opt);
+  });
+});
+
+
+  // Step 2: Payment and cost logic
+function handlePayment() {
+  const style = document.getElementById("artStyle").value;
+  const size = document.getElementById("size").value;
+  const members = document.getElementById("members").value;
+
+  if (!style || !size || !members) {
+    alert("Please select all options.");
+    return;
+  }
+
+    const costMap = {
+      pencil: {
+        A5: { "1": 500 },
+        A4: { "1": 1000, "2": 2000 },
+        A3: { "1": 2500, "2": 3000 },
+        A2: { "1": 3500, "2": 5000 },
+        A1: { "1": 8000, "2": 10000, "3": 10000, "4": 10000, "5": 10000 }
+      },
+      popart: {
+        A4: { "1": 2500, "2": 3000 },
+        A3: { "1": 3500, "2": 5000 }
+      },
+      charcoal: {
+        A5: { "1": 3000 },
+        A4: { "1": 4000, "2": 4500 },
+        A3: { "1": 5000, "2": 5500 },
+        A2: { "1": 6500, "2": 7000 }
+      },
+      painting: {
+        A4: { "1": 4000, "2": 4500 },
+        A3: { "1": 5000, "2": 5500 }
+      },
+      mandala: {
+        A4: { "1": 1000, "2": 2000 },
+        A3: { "1": 2500, "2": 3000 },
+        A2: { "1": 3500, "2": 5000 }
+      }
+    };
+
+    const amount = costMap?.[style]?.[size]?.[members];
+
+    if (!amount) {
+      alert("Invalid combination selected.");
+      return;
+    }
+
+    document.getElementById("display-amount").textContent = amount;
+    document.getElementById("payment-section").style.display = "block";
+
+    if (/Android|iPhone/i.test(navigator.userAgent)) {
+      const upiId = "9603342556@ptsbi";
+      const upiUrl = `upi://pay?pa=${upiId}&pn=Shades of Art&am=${amount}&cu=INR`;
+      window.location.href = upiUrl;
+    }
+  }
+  function submitOrder(event) {
+    event.preventDefault(); // stop default form submit
+
+    // Collect all required fields
+    const name = document.querySelector("input[type='text']").value.trim();
+    const email = document.querySelector("input[type='email']").value.trim();
+    const phone = document.querySelector("input[type='tel']").value.trim();
+    const style = document.getElementById("artStyle").value;
+    const size = document.getElementById("size").value;
+    const members = document.getElementById("members").value;
+    const screenshot = document.getElementById("paymentScreenshot").value;
+
+    // Check for empty fields
+    if (!name || !email || !phone || !style || !size || !members || !screenshot) {
+      alert("Please fill all the details before submitting.");
+      return false;
+    }
+
+    // ✅ If all is valid, redirect to thankyou page
+    window.location.href = "thankyou.html";
+
+    return true;
+  }
+</script>
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full view" />
+</div>
+</body>
+</html>
